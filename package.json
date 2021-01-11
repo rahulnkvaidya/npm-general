@@ -1,6 +1,6 @@
 {
   "name": "rps-general",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -12,5 +12,9 @@
     "aws-sdk": "^2.824.0",
     "axios": "^0.21.1",
     "uuid": "^8.3.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rahulnkvaidya/npm-general.git"
   }
 }
