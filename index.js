@@ -64,6 +64,41 @@ var rpsGeneral = {
       }
     });
   },
+  /**
+   * S3 File Delete callback responce.
+   *
+   * @param {filename} filename aws file .
+   * @param {bucket} bucket Name aws S3 bucket Distribution Id.
+   * @param {accessKeyId} accessKeyId string aws accesskey.
+   * @param {secretAccessKey} secretAccessKey string aws secretAccessKey.
+   * @param {region} region string aws region
+   * @return {callback} callback return as JSON.
+   */
+  S3DeleteFile: function deleteFile(
+    filename,
+    bucket,
+    accessKeyId,
+    secretAccessKey,
+    region,
+    callback
+  ) {
+    var s3 = new AWS.S3({
+      accessKeyId: accessKeyId,
+      secretAccessKey: secretAccessKey,
+      region: region,
+    });
+    var params = {
+      Bucket: bucket,
+      Key: filename,
+    };
+    s3.deleteObject(params, function (err, data) {
+      if (data) {
+        callback(data);
+      } else {
+        err(err);
+      }
+    });
+  },
 };
 
 module.exports = rpsGeneral;
