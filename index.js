@@ -3,8 +3,10 @@ var uuid = require("uuid");
 const { v4: uuidv4 } = require("uuid");
 var pagination = require('./pagination');
 var time = require('./time');
+var file = require('./file');
 
 var rpsGeneral = {
+  file,
   time,
   pagination,
   /**
@@ -100,7 +102,7 @@ var rpsGeneral = {
       if (data) {
         callback(data);
       } else {
-        err(err);
+        callback(err);
       }
     });
   },
