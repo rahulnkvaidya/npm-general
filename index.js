@@ -4,8 +4,10 @@ const { v4: uuidv4 } = require("uuid");
 var pagination = require('./pagination');
 var time = require('./time');
 var file = require('./file');
+var Maths = require('./maths');
 
 var rpsGeneral = {
+  Maths,
   file,
   time,
   pagination,
