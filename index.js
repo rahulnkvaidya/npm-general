@@ -5,8 +5,12 @@ var pagination = require('./pagination');
 var time = require('./time');
 var file = require('./file');
 var Maths = require('./maths');
+var Words = require("./randomword");
+var Calendar = require("./calendar");
 
 var rpsGeneral = {
+  Calendar,
+  Words,
   Maths,
   file,
   time,
