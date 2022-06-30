@@ -8,8 +8,6 @@ var pagination = {
       page = 1;
     } else if (page === "undefined") {
       page = 1;
-    } else if (_.isEmpty(page)) {
-      page = 1;
     } else {
       page = page;
     }
