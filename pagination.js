@@ -2,8 +2,8 @@ const _ = require("lodash");
 
 var pagination = {
   pageLimitToForm: function (page, limit) {
-    var page = page;
-    var limit = limit;
+    var page = parseInt(page);
+    var limit = parseInt(limit);
     if (_.isUndefined(page)) {
       page = 1;
     } else if (page === "undefined") {
